@@ -1,6 +1,6 @@
-# 📊 Customer Churn Prediction System
+#  Customer Churn Prediction System
 
-## 🔍 Overview
+## Overview
 
 This project predicts whether a telecom customer is likely to **churn (leave the service)** based on customer demographics, service subscriptions, and contract details.
 
@@ -15,7 +15,7 @@ Special emphasis is placed on **correct schema handling**, **ternary categorical
 
 ---
 
-## 🧠 Problem Statement
+## Problem Statement
 
 Customer churn is a critical issue for subscription-based businesses.  
 The goal of this project is to:
@@ -29,7 +29,7 @@ This enables businesses to:
 
 ---
 
-## 📁 Dataset
+## Dataset
 
 - **File:** `churn_dataset.csv`
 - **Type:** Structured tabular dataset
@@ -44,36 +44,36 @@ This enables businesses to:
 | Ternary Categorical | `OnlineSecurity`, `TechSupport`, `StreamingTV` (`Yes / No / No internet service`) |
 | Multi-class Categorical | `Contract`, `InternetService`, `PaymentMethod` |
 
-⚠️ A major challenge addressed in this project was **correctly handling ternary categorical features**, which are often mistakenly treated as binary.
+A major challenge addressed in this project was **correctly handling ternary categorical features**, which are often mistakenly treated as binary.
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
-### 1️⃣ Data Preprocessing
+### 1. Data Preprocessing
 - Removed non-informative identifier columns
 - Explicitly encoded **only true binary features**
 - Preserved ternary categorical features for proper encoding
 - Handled missing values (`TotalCharges`)
 - Ensured schema consistency between training and inference
 
-### 2️⃣ Feature Engineering
+### 2. Feature Engineering
 - Numerical features scaled using `StandardScaler`
 - Categorical features encoded using `OneHotEncoder`
 - Binary features passed through without distortion
 
-### 3️⃣ Model Training
+### 3. Model Training
 - **Algorithm:** Random Forest Classifier
 - **Trees:** 200
 - Trained using a `Pipeline` with `ColumnTransformer` to ensure reproducibility
 
-### 4️⃣ Evaluation
+### 4. Evaluation
 - Accuracy and classification report
 - Feature importance visualization to understand churn drivers
 
 ---
 
-## 🤖 Model Output
+## Model Output
 
 The model returns:
 
@@ -88,7 +88,7 @@ Predictions are probabilistic and based on learned patterns, not memorization of
 
 ---
 
-## 🚀 FastAPI Inference Service
+## FastAPI Inference Service
 
 The trained model is deployed using **FastAPI** for real-time predictions.
 
@@ -133,7 +133,7 @@ POST `/predict`
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Python
 - Pandas & NumPy
@@ -147,7 +147,7 @@ POST `/predict`
 
 ---
 
-## ⚠️ Key Challenges Addressed
+## Key Challenges Addressed
 
 - Incorrect assumptions about binary vs ternary features
 - Schema mismatch between training and inference pipelines
@@ -157,7 +157,7 @@ POST `/predict`
 
 ---
 
-## ▶️ How to Run the Project
+## How to Run the Project
 
 ### Install dependencies
 
@@ -177,16 +177,6 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## 📌 Future Enhancements
-
-- Handle class imbalance explicitly
-- Add SHAP-based explainability
-- Implement batch prediction endpoints
-- Containerize using Docker
-- Deploy on cloud platforms
-
----
-
-## ⭐ Final Note
+## Final Note
 
 This project emphasizes **data correctness, schema alignment, and production readiness**, reflecting real-world ML engineering challenges.
