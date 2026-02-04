@@ -7,3 +7,6 @@ __pycache__/
 
 # OS junk
 .DS_Store
+
+#model package
+churn_model.pkl

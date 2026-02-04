@@ -1,0 +1,23 @@
+# Web framework
+fastapi>=0.123
+uvicorn>=0.38
+
+# Configuration
+python-dotenv>=1.2
+
+# HTTP
+requests>=2.32
+
+# Data & ML
+numpy>=2.3
+pandas>=2.3
+scikit-learn>=1.7
+scipy>=1.16
+
+# Visualization (optional – remove if not used in prod)
+matplotlib>=3.10
+seaborn>=0.13
+
+# Validation / typing
+pydantic>=2.12
+typing-extensions>=4.15
