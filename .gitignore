@@ -7,3 +7,8 @@ __pycache__/
 
 # OS junk
 .DS_Store
+.DS_Store
+
+#packages
+churn_model.pkl
+xgboost_churn_model.pkl
